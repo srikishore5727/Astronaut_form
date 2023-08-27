@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Trip</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            /* border: 2px dashed; */
+            width:100%;
+            height:100vh;
+            background-image: url("https://kq-storage.s3.ap-south-1.amazonaws.com/Github/astronaut/sky-moon-bg%5B1%5D.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            
+
+        }
+        #astronaut-1{
+            height: 400px;
+            position: absolute;
+            top:2%;
+            left:5%;
+            animation-name: fly;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+        }
+
+        @keyframes fly{
+            0%{
+                top: 10%;
+            }
+            50%{
+                top: 7%;
+            }
+
+        }
+
+        #astronaut-2{
+            height:350px;
+            position: absolute;
+            top:30%;
+            left:30%;
+            animation: fly1 5s infinite ease-in-out;
+            animation-direction: alternate;
+
+        }
+        @keyframes fly1{
+            0%{
+                top: 30%;
+            }
+            50%{
+                top: 35%;
+            }
+
+        }
+        form{
+            width: 450px;
+            position: absolute;
+            right: 5%;
+            top: 8%;
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px 50px;
+        }
+        h1{
+            text-align: center;
+            margin-top: 5px;
+        }
+        label{
+            margin-top: 20px;
+            margin-bottom: 5px;
+            }
+        .input-tags{
+            width: 350px;
+            height: 40px;
+            padding-left: 2%;
+        }
+        .block-ele{
+            display: block;
+            }
+        #radio-div{
+            width: 80%;
+            border: 2px solid red;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        #submit-btn{
+            display: block;
+            margin: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            background-color: rgb(255, 118, 59);
+            border-radius: 15px;
+            padding: 10px;
+            color: white;
+            border: 0;
+        }
+        #two{
+            display: inline;
+            margin-left: 3%;
+        
+        }
+        /* #three{
+            border: 3px solid red;
+            margin-left: 30px;
+        } */
+
+    </style>
+</head>
+<body>
+    <img id=astronaut-1 src="https://kq-storage.s3.ap-south-1.amazonaws.com/Github/astronaut/space-man-1%5B1%5D.png" alt="image1">
+    <img id="astronaut-2" src="https://kq-storage.s3.ap-south-1.amazonaws.com/Github/astronaut/space-man-2%5B1%5D.png" alt="image2">
+
+
+    <form action="">
+    <h1>Rocket around the <br/> moon with your BFFs</h1>
+    <label class="block-ele" for="countries">Departure Country</label>
+    <select name="countries" id="countries" class="input-tags">
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="UAE">UAE</option>
+    </select>
+        
+    <label class="block-ele" for="">No. of Space Travellers</label>
+        <input class="block-ele input-tags" type="number"/>
+        
+    <label class="block-ele" for="">Your Email</label>
+        <input class="block-ele input-tags" type="email" placeholder="ilovespace@gmail.com">
+        
+    <label for="" class="block-ele">Do you wanna rent a space suit?</label>
+        <input type="radio" name="rent" id="yes">
+    <label for="" class="radio-btn">Yes, Please</label>
+        <input type="radio" name="rent" id="two">
+    <label for="" class="radio-btn" id="three">No, I have my own</label>
+    
+        <input id="submit-btn" type="submit" value="TAKE US TO SPACE" >
+ 
+    </form>
+</body>
+</html>
